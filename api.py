@@ -16,7 +16,6 @@ def load_stock_data():
 def get_stocks():
     api_key = request.headers.get("X-API-KEY")
 
-    # ✅ Check if API key is valid
     if api_key not in API_KEYS:
         return jsonify({"error": "Invalid API Key"}), 401
     
